@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Image Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="gall.css"/>
+</head>
+<body>
+  <nav>
+    <div class="logo-section">
+      <div class="logo-section"><img src="preview.png" alt="" style="width: 100px;"></div><span> BTEC LEVEL 3</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tours.html">Tours</a>
+      <a href="gall.html">Gallery</a>
+      <a href="cons.html">Contact</a>
+      <button onclick="toggleForm()" class="search-button">Book a Tour</button>
+    </div>
+  </nav>
+  
+  <div id="bookingFormContainer">
+    <form id="bookingForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="destination">Preferred Destination:</label>
+      <select id="destination" name="destination" required>
+        <option value="">Select a destination</option>
+        <option value="salaga">Salaga Slave Market</option>
+        <option value="Elmina castle">Elmina Castle</option>
+        <option value="kakum">Kakum National park</option>
+        <option value="larabanga">Larabanga mosque</option>
+      </select>
+
+      <label for="date">Preferred Travel Date:</label>
+      <input type="date" id="date" name="date" required>
+      <label for="budget">Budget (GHC):</label>
+      <input type="number" id="budget" name="budget" required>
+
+      <div class="success-message" id="successMessage">
+        <button type="submit">Submit Booking</button>
+      </div>
+    </form>
+  </div>
+
+  <header class="site-header">
+    <div class="container text-center">
+      <h1 class="title">Image Gallery</h1>
+      <p class="subtitle">A collection of beautiful moments</p>
+    </div>
+  </header>
+
+  <main class="container gallery-section">
+    <div class="gallery-grid">
+      
+      <div class="gallery-card">
+        <img src="eli.jpg" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="Mole National Park baboon.jpg" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="istockphoto-1011982782-612x612.jpg" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="Ghana-Slave-Castle.jpg" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('Ghana-Slave-Castle.jpg')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="dungeons.png" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('Ghana-Slave-Castle.jpg')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="R.jpg" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('R.jpg')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="Kwame Nkrumah 1909-1972 Accra, Ghana - Nicola Cataudella and Sergio Barbeski.jpeg" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('Kwame Nkrumah 1909-1972 Accra, Ghana - Nicola Cataudella and Sergio Barbeski.jpeg')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="Mole-1-1024x1000.gif" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('Mole-1-1024x1000.gif')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="THISISACCRA on Instagram_ _Happy Founders’ Day from all of us @ThisisAccra! __🇬🇭 _ God bless our homeland Ghana _ And make our nation great and strong __ _ Photo by @pauladdophotography_.jpeg" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('THISISACCRA on Instagram_ _Happy Founders’ Day from all of us @ThisisAccra! __🇬🇭 _ God bless our homeland Ghana _ And make our nation great and strong __ _ Photo by @pauladdophotography_.jpeg')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="Ghana Month!.jpeg" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('Ghana Month!.jpeg')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="download.jpeg" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('download.jpeg')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="elephant.jpg" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('elephant.jpg')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <!-- <div class="gallery-card">
+        <img src="https://source.unsplash.com/random/600x400/?nature" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://source.unsplash.com/random/600x400/?nature" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://source.unsplash.com/random/600x400/?nature" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://source.unsplash.com/random/600x400/?nature" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://source.unsplash.com/random/600x400/?nature" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://source.unsplash.com/random/600x400/?nature" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://source.unsplash.com/random/600x400/?nature" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://source.unsplash.com/random/600x400/?nature" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://source.unsplash.com/random/600x400/?nature" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://source.unsplash.com/random/600x400/?nature" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://source.unsplash.com/random/600x400/?nature" alt="Nature" class="gallery-img"/>
+        <div class="overlay">
+          <button onclick="openLightbox('https://source.unsplash.com/random/600x400/?nature')">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div> -->
+    
+    </div>
+  </main>
+
+ 
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-inner">
+      <img id="lightbox-img" class="lightbox-content" src="" alt=""/>
+      <button onclick="closeLightbox()" class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    <div style="display: block;">
+      <div class="logo"> <h3>BTEC LEVEL 3</h3></div>
+      <div><img src="removebg-preview.png" alt=""  style="width: 200px;"></div>
+    </div>
+    <div>
+      <h3>Company</h3>
+      <br>
+      <a href="#">Blog</a><br>
+      <br>
+      <a href="#">FAQs</a><br>
+      <br>
+      <a href="#">Terms of Service</a><br>
+      <br>
+      <a href="">Privacy Policy</a><br>
+    </div>
+    <div>
+      <h3>Contact Us</h3>
+      <br>
+      <a href="#">NS-3458-6548 Accra</a><br>
+      <br>
+      <a href="#">Mempeasem East</a><br>
+      <br>
+      <a href="#">+233 592 507 777</a>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <br>
+      <a href="#">Style Guide</a><br>
+      <br>
+      <a href="#">Careers</a><br>
+      <br>
+      <a href="#">Help </a>
+    </div>
+    <div class="social-icons">
+      <h3>Social Share</h3>
+      <a href="#"><box-icon type='logo' name='facebook-circle'></box-icon></a>
+      <a href="#"><box-icon name='twitter' type='logo'></box-icon></a>
+      <a href="#"><box-icon name='instagram-alt' type='logo'></box-icon></a>
+      <a href="#"><box-icon name='tiktok' type='logo'></box-icon></a>
+    </div>
+    <div class="copyright">
+      © 2025 Tourist Website. All rights reserved.
+    </div>
+  </footer>
+  <script src="script.js">
+    function openLightbox(imgSrc) {
+      document.getElementById('lightbox-img').src = imgSrc;
+      document.getElementById('lightbox').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    document.getElementById('lightbox').addEventListener('click', function (e) {
+      if (e.target === this) closeLightbox();
+    });
+  </script>
+
+</body>
+</html>

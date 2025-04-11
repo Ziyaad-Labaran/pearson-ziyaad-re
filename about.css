@@ -1,0 +1,419 @@
+:root {
+    --primary-green: #2d5f4d;
+    --secondary-blue: #0ab23a;
+    --accent-white: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: var(--primary-green);
+    background: var(--accent-white);
+    /* position: fixed; */
+    width: 100%;
+    border-bottom: 2px solid var(--primary-green);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links button {
+    border: none;
+    padding: 0.7rem 2rem;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: var(--primary-green);
+    transition: color 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 0;
+    background: var(--secondary-blue);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-blue);
+}
+
+.menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    color: #4b5563;
+    font-size: 1.5rem;
+}
+
+.hero {
+    padding: 5rem 0;
+    background: linear-gradient( rgba(51, 155, 65, 0.808), #000000cb), url(Cape_Coast_Castle\,_Cape_Coast\,_Ghana.JPG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.container1 {
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.section-title-one {
+    font-size: 1.9rem;
+    text-align: center;
+}
+
+.text-gray {
+    font-size: 1.3rem;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .flex-row {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.half {
+    flex: 1;
+    padding: 50px;
+}
+
+.img-rounded {
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+
+.grid-3 {
+    display: grid;
+    gap: 2rem;
+    /* margin: 1.2%; */
+}
+
+.grid-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 40px;
+}
+
+.value-card-one {
+    background-color: white;
+    padding: 5rem;
+    border-radius: 0.5rem;
+    width: 40%;
+    text-align: center;
+    box-shadow: 3px 1px 4px rgba(105, 99, 99, 0.05);
+}
+
+@media (min-width: 768px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-4 {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        margin-bottom: 40px;
+    }
+    .value-card-one {
+        width: 98%;
+    }
+}
+
+.value-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    padding: 60px;
+    transition-duration: 0.8s;
+}
+
+.value-card i {
+    color: #4f46e5;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+#card-one:hover {
+    background-color: red;
+    color: var(--accent-white);
+    box-shadow: 1px 2px 1px 2.3px rgb(221, 219, 219);
+}
+
+#card-two:hover {
+    background-color: yellow;
+    color: black;
+    box-shadow: 1px 2px 1px 2.3px rgb(221, 219, 219);
+}
+
+#card-three:hover {
+    background-color: green;
+    color: var(--accent-white);
+    box-shadow: 1px 2px 1px 2.3px rgb(221, 219, 219);
+}
+
+.container-two {
+    background: url(Kwame\ Nkrumah\ 1909-1972\ Accra\,\ Ghana\ -\ Nicola\ Cataudella\ and\ Sergio\ Barbeski.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+}
+
+.team-role {
+    color: #4f46e5;
+    margin-bottom: 0.5rem;
+}
+
+.section-title3 {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 20px;
+}
+
+.trip-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px 40px;
+}
+
+.trip-item {
+    background-color: #686768;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.trip-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.trip-text {
+    font-size: 0.9em;
+    color: #ffffff;
+    text-align: center;
+}
+
+.stars {
+    margin-top: 20px;
+    color: gold;
+    font-size: 1.5em;
+}
+
+.arrow-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #6b7280;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #4f46e5;
+}
+
+.cta {
+    background-color: #4f46e5;
+    color: white;
+    text-align: center;
+}
+
+.cta a {
+    background-color: var(--secondary-blue);
+    color: aliceblue;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 2rem;
+    transition: background-color 0.3s;
+}
+
+.cta a:hover {
+    background-color: var(--primary-green);
+}
+
+footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 20px;
+}
+
+.footer-content {
+    display: grid;
+    gap: 2rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    color: #9ca3af;
+}
+
+footer h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #9ca3af;
+}
+
+footer a:hover {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    nav {
+        display: flex !important;
+    }
+    .menu-btn {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
