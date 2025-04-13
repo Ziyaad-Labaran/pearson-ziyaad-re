@@ -204,7 +204,6 @@ form button[type="submit"] {
 .welcome-card {
     display: flex;
     width: 85%;
-    height: 70vh;
     background: white;
     border-radius: 10px;
     overflow: hidden;
