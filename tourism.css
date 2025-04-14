@@ -61,9 +61,9 @@ nav {
 
 .hamburger {
     display: none;
-    flex-direction: column;
+    flex-direction: row;
     cursor: pointer;
-    gap: 5px;
+    gap: 2px;
 }
 
 .hamburger .line {
