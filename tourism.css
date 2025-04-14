@@ -69,7 +69,7 @@ nav {
 .hamburger .line {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: rgb(2, 92, 29);
     transition: transform 0.3s ease;
 }
 
